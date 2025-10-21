@@ -7,7 +7,11 @@ terraform {
   }
 
   backend "s3" {
-
+    bucket        = "daws-terraform-remote-state"
+    key           = "workspace-demo"
+    region        = "us-east-1"
+    use_lockfile  = true
+    encrypt       = true
   }
 }
 
